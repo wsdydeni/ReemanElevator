@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ReemanElevatorDemo</string>
+    <string name="login_username_hint">please input your account</string>
+    <string name="login_password_hint">please input your password</string>
+    <string name="login">Login</string>
+    <string name="choose_buildings">Choose Buildings</string>
+    <string name="choose_start_floor">Choose Robot Start Floor</string>
+    <string name="choose_end_floor">Choose Robot End Floor</string>
+    <string name="elevator_status">Elevator Status</string>
+    <string name="choose_lift">Choose Lift</string>
+</resources>

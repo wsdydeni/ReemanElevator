@@ -1,0 +1,56 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'reeman.elevator.demo'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "reeman.elevator.demo"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation("com.squareup.okhttp3:okhttp:4.11.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+    implementation 'com.github.fengzhizi715:saf-logginginterceptor:v1.6.13'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.tencent:mmkv:1.3.1'
+    implementation 'com.github.getActivity:ToastUtils:10.5'
+
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'com.kunminx.arch:smooth-navigation:4.0.0'
+
+    implementation "androidx.recyclerview:recyclerview:1.3.0"
+}
+
+dependencies {
+    constraints {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
+            because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
+        }
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") {
+            because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+        }
+    }
+}

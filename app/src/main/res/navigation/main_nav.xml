@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        tools:layout="@layout/fragment_login"
+        android:id="@+id/loginFragment"
+        android:name="reeman.elevator.demo.fragment.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_buildingFragment"
+            app:destination="@id/buildingFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/buildingFragment"
+        android:name="reeman.elevator.demo.fragment.BuildingFragment"
+        android:label="BuildingFragment"
+        tools:layout="@layout/fragment_building" >
+        <action
+            android:id="@+id/action_buildingFragment_to_liftsFragment"
+            app:destination="@id/liftsFragment" />
+    </fragment>
+
+    <fragment
+        tools:layout="@layout/fragment_lifts"
+        android:id="@+id/liftsFragment"
+        android:name="reeman.elevator.demo.fragment.LiftsFragment"
+        android:label="LiftsFragment" >
+        <action
+            android:id="@+id/action_liftsFragment_to_startFloorFragment"
+            app:destination="@id/startFloorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/startFloorFragment"
+        android:name="reeman.elevator.demo.fragment.StartFloorFragment"
+        android:label="FloorFragment"
+        tools:layout="@layout/fragment_start_floor" >
+        <action
+            android:id="@+id/action_startFloorFragment_to_endFloorFragment"
+            app:destination="@id/endFloorFragment" />
+    </fragment>
+
+    <fragment
+        tools:layout="@layout/fragment_end_floor"
+        android:id="@+id/endFloorFragment"
+        android:name="reeman.elevator.demo.fragment.EndFloorFragment"
+        android:label="EndFloorFragment" >
+        <action
+            android:id="@+id/action_endFloorFragment_to_elevatorStatusFragment"
+            app:destination="@id/elevatorStatusFragment" />
+    </fragment>
+
+    <fragment
+        tools:layout="@layout/fragment_elevator_status"
+        android:id="@+id/elevatorStatusFragment"
+        android:name="reeman.elevator.demo.fragment.ElevatorStatusFragment"
+        android:label="ElevatorStatusFragment" >
+        <action
+            android:id="@+id/action_elevatorStatusFragment_to_buildingFragment"
+            app:destination="@id/buildingFragment"
+            app:popUpTo="@id/buildingFragment" />
+    </fragment>
+
+
+
+
+</navigation>
